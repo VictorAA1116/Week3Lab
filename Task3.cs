@@ -4,32 +4,43 @@ using UnityEngine;
 
 public class Task3 : MonoBehaviour
 {
-    public int dollarsPaid = 0;
-    int dollarsLeft = 0;
-    int hundreds = 0;
-    int fifties = 0;
-    int twenties = 0;
-    int tens = 0;
-    int fives = 0;
-    int ones = 0;
+    //Set initial components
+    public int TotalPaid = 0;
+    int leftover = 0;
+    int hun = 0;
+    int fif = 0;
+    int twen = 0;
+    int ten = 0;
+    int five = 0;
+    int one = 0;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        hundreds = dollarsPaid / 100;
-        dollarsLeft = dollarsPaid % 100;
-        fifties = dollarsLeft / 50;
-        dollarsLeft = dollarsLeft % 50;
-        twenties = dollarsLeft / 20;
-        dollarsLeft = dollarsLeft % 20;
-        tens = dollarsLeft / 10;
-        dollarsLeft = dollarsLeft % 10;
-        fives = dollarsLeft / 5;
-        dollarsLeft = dollarsLeft % 5;
-        ones = dollarsLeft / 1;
+        //Set the equation for each individual bill with total amount being paid and the left over value
+        hun = TotalPaid / 100;
+        leftover = TotalPaid % 100;
 
-        Debug.Log($"You will be paid with {hundreds} hundreds, {fifties} fifties, {twenties} twenties, {tens} tens, {fives} fives, {ones} ones");
+        fif = leftover / 50;
+        leftover = leftover % 50;
+
+        twen = leftover / 20;
+        leftover = leftover % 20;
+
+        ten = leftover / 10;
+        leftover = leftover % 10;
+
+        five = leftover / 5;
+        leftover = leftover % 5;
+
+        one = leftover / 1;
+        leftover = leftover % 1;
+
+
+        Debug.Log($"Bill Type Recieved, Hundred:{hun} Fifty:{fif} Twenty:{twen} Ten:{ten} Five:{five} One: {one}");
+
+
     }
 
     // Update is called once per frame
