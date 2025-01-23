@@ -15,12 +15,6 @@ public class Task1 : MonoBehaviour
 
     public int challengescore = 0;
 
-    //calculate challenge score
-  
-
-
-
-  
     // Start is called before the first frame update
     void Start()
     {
